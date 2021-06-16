@@ -13,7 +13,7 @@ pipeline {
         NEXUS_REPOSITORY = "vprofile-release"
 	NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
-	scannerHome = tool 'sonar-qube'
+	scannerHome = tool 'sonarqube'
         ARTVERSION = "${env.BUILD_ID}"
     }
 	
@@ -57,7 +57,7 @@ pipeline {
         stage('CODE ANALYSIS with SONARQUBE') {
           
 		  environment {
-             scannerHome = tool 'sonar-qube'
+             scannerHome = tool 'sonarqube'
           }
 
           steps {
