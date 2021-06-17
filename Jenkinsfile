@@ -1,10 +1,10 @@
 pipeline {
     
-	agent any
+    agent any
 	
-	tools {
+    tools {
         maven "maven3"
-    
+    }
 	
     environment {
         NEXUS_VERSION = "nexus3"
